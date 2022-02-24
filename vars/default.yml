@@ -1,0 +1,16 @@
+
+---
+#System Settings
+php_modules: [ 'php-curl', 'php-gd', 'php-mbstring', 'php-xml', 'php-xmlrpc', 'php-soap', 'php-intl', 'php-zip' ]
+
+
+#MySQL Settings
+mysql_root_password: "1155144b!"
+mysql_db: "wordpress"
+mysql_user: "wpuser"
+mysql_password: "1155144b!"
+
+#HTTP Settings
+http_host: "platon.dev"
+http_conf: "platon.dev.conf"
+http_port: "8081"
