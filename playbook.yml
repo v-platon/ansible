@@ -1,5 +1,5 @@
 ---
-- hosts: ansible-target
+- hosts: ansible-tar1
   become: yes
   vars_files:
     - vars/default.yml
@@ -130,7 +130,10 @@
     - name: Install NGINX
       apt: name=nginx update_cache=yes state=latest
 
-    - name: Set up Apache VirtualHost
+    - name: Disable NGINX deafult config
+      command: mv /etc/nginx/sites-available/default /etc/nginx/sites-available/.default
+
+    - name: Set up NGINX VirtualHost
       template:
         src: "files/nginx.conf"
         dest: "/etc/nginx/sites-available/nginx"
